@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>The Museum of Ancient Art</title>
+<meta name="description" content="The Museum of Ancient Art in Aarhus, Denmark is museum dedicated to the ancient art and cultural history of the mediterranean countries, in particular Ancient Greece, Etruscan civilization and Ancient Rome.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/au_segl-inv.svg">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://mackonis.dk" />
+<link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+</head>
+<body>
+<!-- start of header -->
+<div class="wrapper">
+	<header>
+		<div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a>
+		</div>
+		<div class="heading">
+							<p>Audio guide</p>
+		</div>
+	</header>
+		 <div class="audio-play">
+		 		 <audio id="player" src="audio/sound.mp3" type="audio/mp3">
+		 </audio>
+    <input type="image" src="img/play-button.png" id="playAudio" />
+</div>
+ <script>
+	document.getElementById("playAudio").addEventListener("click", function(){
+	var audio = document.getElementById('player');
+  if(this.className == 'is-playing'){
+    this.className = "";
+    this.innerHTML = "Play"
+    audio.pause();
+  }else{
+    this.className = "is-playing";
+    this.innerHTML = "Pause";
+    audio.play();
+  }
+
+});
+	</script>
+  <!-- /.wrapper --> 
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="css/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
